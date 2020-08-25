@@ -1,5 +1,5 @@
   
-FROM quay.io/snehakpersistent/multi-arch-travis:x86_64
+FROM quay.io/snehakpersistent/multi-arch-travis:latest
 
 RUN apt-get install -y apache2 \
   && service apache2 start
