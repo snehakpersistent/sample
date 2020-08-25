@@ -1,9 +1,9 @@
   
 FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
 
-RUN yum --disableplugin=subscription-manager -y module enable php:7.2 \
-  && yum --disableplugin=subscription-manager -y install httpd php \
-  && yum --disableplugin=subscription-manager clean all
+RUN apt-get install -y php7.2 php7.2-cli php7.2-common \
+  && apt-get install -y apache2 \
+  && systemctl start apache2
 
 ADD index.php /var/www/html
 
