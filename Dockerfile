@@ -1,5 +1,5 @@
   
-FROM quay.io/snehakpersistent/multi-arch-travis:latest
+FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
 
 RUN apt-get install -y apache2 \
   && service apache2 start
@@ -7,3 +7,4 @@ RUN apt-get install -y apache2 \
 ADD index.html /var/www/html
   
 EXPOSE 80
+CMD httpd -D FOREGROUND
