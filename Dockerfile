@@ -2,8 +2,7 @@
 FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
 
 RUN apt-get install php -y \
-  && apt-get install -y apache2 \
-  && systemctl start apache2
+  && apt-get install -y apache2
 
 ADD index.php /var/www/html
 
