@@ -2,7 +2,7 @@ FROM ppc64le/ubuntu:latest
 #FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
 
 RUN apt-get -y update \
-  && apt-get install -y apache2 apache2-utils
+  && apt-get install -y apache2
 
 ADD index.html /var/www/html
   
