@@ -7,4 +7,4 @@ RUN apt-get install -y apache2 apache2-utils\
 ADD index.html /var/www/html
   
 EXPOSE 80
-CMD apache2ctl -D FOREGROUND
+CMD echo "Started apache server! Hello World."
