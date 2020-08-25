@@ -1,7 +1,7 @@
   
 FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
 
-RUN apt-get install -y php7.2 php7.2-cli php7.2-common \
+RUN apt-get install php -y \
   && apt-get install -y apache2 \
   && systemctl start apache2
 
