@@ -8,3 +8,4 @@ ADD index.html /var/www/html
   
 EXPOSE 80
 CMD echo "Started apache server! Hello World."
+CMD curl http://localhost:80
