@@ -11,7 +11,7 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
 #RUN whoami
 
 EXPOSE 8080
-CMD apachectl -DFOREGROUND
+CMD apachectl -D FOREGROUND
 #RUN service apache2 status
 #RUN curl http://localhost:8080
 #CMD sleep 2000s
