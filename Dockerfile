@@ -9,7 +9,7 @@
 #EXPOSE 80
 #RUN service apache2 start
 
-FROM registry.access.redhat.com/ubi8/ubi
+FROM ppc64le/centos:latest
 
 RUN yum --disableplugin=subscription-manager -y module enable php:7.2 \
   && yum --disableplugin=subscription-manager -y install httpd php \
