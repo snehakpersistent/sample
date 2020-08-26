@@ -8,7 +8,7 @@ ADD index.html /var/www/html
 #RUN arch
 EXPOSE 80
 RUN service apache2 start
-RUN sleep 400
+RUN sleep 200
 
 #FROM ppc64le/centos:latest
 
