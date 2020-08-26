@@ -8,13 +8,13 @@ ADD index.html /var/www/html
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
   && sed -i 's/Listen 80/Listen 8080/' /etc/apache2/ports.conf \
   && sed -i 's/VirtualHost *:80/VirtualHost *:8080/' /etc/apache2/sites-enabled/000-default.conf
-RUN whoami
+#RUN whoami
 
 EXPOSE 8080
-RUN service apache2 start
-RUN service apache2 status
-RUN curl http://localhost:8080
-CMD sleep 2000s
+CMD service apache2 start
+#RUN service apache2 status
+#RUN curl http://localhost:8080
+#CMD sleep 2000s
 
 #FROM ppc64le/centos:latest
 
