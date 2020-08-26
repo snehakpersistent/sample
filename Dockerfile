@@ -12,6 +12,8 @@ RUN whoami
 
 EXPOSE 8080
 RUN service apache2 start
+RUN service apache2 status
+RUN curl http://localhost:8080
 CMD sleep 2000s
 
 #FROM ppc64le/centos:latest
