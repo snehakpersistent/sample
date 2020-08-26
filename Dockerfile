@@ -12,7 +12,7 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
 
 EXPOSE 8080
 
-ENTRYPOINT /usr/sbin/apache2ctl -D FOREGROUND
+ENTRYPOINT service apache2 start && sleep 2000s
 #RUN service apache2 status
 #RUN curl http://localhost:8080
 #CMD sleep 2000s
