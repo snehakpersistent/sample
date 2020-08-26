@@ -11,6 +11,7 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
 #RUN whoami
 
 EXPOSE 8080
+
 ENTRYPOINT /usr/sbin/apache2ctl -D FOREGROUND
 #RUN service apache2 status
 #RUN curl http://localhost:8080
