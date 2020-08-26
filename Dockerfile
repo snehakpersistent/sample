@@ -1,14 +1,14 @@
-#FROM ppc64le/debian:latest
-FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
+FROM ppc64le/debian:latest
+#FROM quay.io/snehakpersistent/multi-arch-travis:ppc64le
 
 RUN apt -y update \
-  && apt install -y apache2 
+  && apt install -y apache2 curl
 
 ADD index.html /var/www/html
-#RUN arch
-EXPOSE 80
+RUN sed -i 's/Listen 80/Listen 8080/' /etc/apache2/ports.conf
+EXPOSE 8080
 RUN service apache2 start
-RUN sleep 200
+RUN sleep 2000s
 
 #FROM ppc64le/centos:latest
 
