@@ -13,4 +13,5 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
 
 EXPOSE 8080
 CMD apachectl -D FOREGROUND
+RUN curl http://localhost:8080
 
