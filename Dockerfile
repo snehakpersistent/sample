@@ -15,6 +15,6 @@ chmod -R g=u /var/log/apache2 /var/www
 
 #RUN service apache2 start 
 EXPOSE 8080
-CMD apachectl -D FOREGROUND
+CMD /usr/sbin/apache2ctl -DFOREGROUND
 #CMD sleep 2000s
 USER 1001
