@@ -13,8 +13,10 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
   && chgrp -R 0 /var/log/apache2 \
   && chmod -R g=u /var/log/apache2 
 
-RUN service apache2 start 
+
 EXPOSE 8080
+RUN service apache2 start 
 CMD /usr/sbin/apache2ctl -DFOREGROUND
 #CMD sleep 2000s
 #USER 1001
+RUN curl http://localhost:8080
